@@ -60,35 +60,35 @@
 
 	h2
 	{
-		font-size: 1.8rem; /* ((1rem * 2) - (0.2 * 1)) */
+		font-size: 1.8rem; /* (1rem * 2) - (0.2 * 1) */
 		line-height: 2.7rem; /* (1.5rem * 2) - (0.3 * 1) */
 		margin-block: 1rem;
 	}
 
 	h3
 	{
-		font-size: 1.6rem; /* ((1rem * 2) - (0.2 * 2)) */
+		font-size: 1.6rem; /* (1rem * 2) - (0.2 * 2) */
 		line-height: 2.4rem; /* (1.5rem * 2) - (0.3 * 2) */
 		margin-block: 1rem;
 	}
 
 	h4
 	{
-		font-size: 1.4rem; /* ((1rem * 2) - (0.2 * 3)) */
+		font-size: 1.4rem; /* (1rem * 2) - (0.2 * 3) */
 		line-height: 2.1rem; /* (1.5rem * 2) - (0.3 * 3) */
 		margin-block: 1rem;
 	}
 
 	h5
 	{
-		font-size: 1.2rem; /* ((1rem * 2) - (0.2 * 4)) */
+		font-size: 1.2rem; /* (1rem * 2) - (0.2 * 4) */
 		line-height: 1.8rem; /* (1.5rem * 2) - (0.3 * 4) */
 		margin-block: 1rem;
 	}
 
 	h6
 	{
-		font-size: 1rem; /* ((1rem * 2) - (0.2 * 5)) */
+		font-size: 1rem; /* (1rem * 2) - (0.2 * 5) */
 		line-height: 1.5rem; /* (1.5rem * 2) - (0.3 * 5) */
 		margin-block: 1rem;
 	}
