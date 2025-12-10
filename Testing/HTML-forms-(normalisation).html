@@ -1,0 +1,462 @@
+<!doctype html>
+<html dir="ltr" lang="en-GB">
+	<head>
+		<base target="_blank">
+		<link href="../Normalisation.css" media="all" rel="stylesheet" type="text/css">
+		<meta charset="UTF-8">
+		<meta content="height = device-height, initial-scale = 1, user-scalable = yes, width = device-width" name="viewport">
+		<style>
+div:not(:first-of-type)
+{
+	margin-block-start: 1rem;
+}
+
+div
+{
+	margin-block-end: 1rem;
+}
+
+.formGrid
+{
+	border-spacing: 0.5rem 1rem;
+	display: table;
+}
+
+.formGridRow > *
+{
+	display: table-cell;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+.formGridRow
+{
+	display: table-row;
+}
+
+.sectionHead
+{
+	background-color: #F0F0F0;
+	border: 0.1rem solid #000000;
+	text-align: center;
+}
+		</style>
+		<title>HTML forms | Normalisation</title>
+	</head>
+	<body>
+		<nav><b>HTML forms</b> (<a href="HTML-forms-(agent-default-styles).html" target="_self">agent default styles</a> • <b><a href="HTML-forms-(normalisation).html" target="_self">normalisation</a></b>)</nav>
+		<main>
+			<div class="sectionHead">
+				<h1>One-column layout</h1>
+			</div>
+			<form>
+				<fieldset>
+					<legend>Separation: <code>&lt;br&gt;</code></legend>
+					<label>Button:</label>
+					<br>
+					<button>Button</button>
+					<br>
+					<br>
+					<label>Input (button):</label>
+					<br>
+					<input type="button" value="Input (button)">
+					<br>
+					<br>
+					<label>Input (checkbox):</label>
+					<br>
+					<input id="Checkbox1" type="checkbox">
+					<label for="Checkbox1">Checkbox</label>
+					<input id="Checkbox2" type="checkbox">
+					<label for="Checkbox2">Checkbox</label>
+					<input id="Checkbox3" type="checkbox">
+					<label for="Checkbox3">Checkbox</label>
+					<br>
+					<br>
+					<label for="Color1">Input (color):</label>
+					<br>
+					<input id="Color1" type="color">
+					<br>
+					<br>
+					<label for="Date1">Input (date):</label>
+					<br>
+					<input id="Date1" type="date">
+					<br>
+					<br>
+					<label for="DateTimeLocal1">Input (datetime-local):</label>
+					<br>
+					<input id="DateTimeLocal1" type="datetime-local">
+					<br>
+					<br>
+					<label for="Email1">Input (email):</label>
+					<br>
+					<input id="Email1" type="email">
+					<br>
+					<br>
+					<label for="File1">Input (file):</label>
+					<br>
+					<input id="File1" type="file">
+					<br>
+					<br>
+					<label>Input (image):</label>
+					<br>
+					<input alt="This is an image, 100 x 200 pixels, with a black border." src="image-100x200-pixels-with-black-border.png" type="image">
+					<br>
+					<br>
+					<label for="Month1">Input (month):</label>
+					<br>
+					<input id="Month1" type="month">
+					<br>
+					<br>
+					<label for="Number1">Input (number):</label>
+					<br>
+					<input id="Number1" type="number">
+					<br>
+					<br>
+					<label for="Password1">Input (password):</label>
+					<br>
+					<input id="Password1" type="password">
+					<br>
+					<br>
+					<label>Input (radio):</label>
+					<br>
+					<input id="Radio1" type="radio">
+					<label for="Radio1">Radio</label>
+					<input id="Radio2" type="radio">
+					<label for="Radio2">Radio</label>
+					<input id="Radio3" type="radio">
+					<label for="Radio3">Radio</label>
+					<br>
+					<br>
+					<label>Input (range):</label>
+					<br>
+					<input type="range">
+					<br>
+					<br>
+					<label>Input (reset):</label>
+					<br>
+					<input type="reset">
+					<br>
+					<br>
+					<label for="Search1">Input (search):</label>
+					<br>
+					<input id="Search1" type="search">
+					<br>
+					<br>
+					<label>Input (submit):</label>
+					<br>
+					<input type="submit">
+					<br>
+					<br>
+					<label for="Tel1">Input (tel):</label>
+					<br>
+					<input id="Tel1" type="tel">
+					<br>
+					<br>
+					<label for="Text1">Input (text):</label>
+					<br>
+					<input id="Text1" type="text">
+					<br>
+					<br>
+					<label for="Time1">Input (time):</label>
+					<br>
+					<input id="Time1" type="time">
+					<br>
+					<br>
+					<label for="URL1">Input (url):</label>
+					<br>
+					<input id="URL1" type="url">
+					<br>
+					<br>
+					<label for="Week1">Input (week):</label>
+					<br>
+					<input id="Week1" type="week">
+					<br>
+					<br>
+					<label>Meter:</label>
+					<br>
+					<meter min="0" max="100" value="50"></meter>
+					<br>
+					<br>
+					<label>Output:</label>
+					<br>
+					<output>Output</output>
+					<br>
+					<br>
+					<label>Progress:</label>
+					<br>
+					<progress max="100" value="50"></progress>
+					<br>
+					<br>
+					<label>Select:</label>
+					<br>
+					<select>
+						<optgroup label="Optgroup">
+							<option>Option</option>
+						</optgroup>
+					</select>
+					<br>
+					<br>
+					<label for="Textarea1">Textarea:</label>
+					<br>
+					<textarea id="Textarea1"></textarea>
+				</fieldset>
+			</form>
+			<div class="sectionHead">
+				<h1>Two-column layout</h1>
+			</div>
+			<form>
+				<fieldset>
+					<legend>Separation: <code>&lt;br&gt;</code></legend>
+					<label>Button:</label>
+					<button>Button</button>
+					<br>
+					<br>
+					<label>Input (button):</label>
+					<input type="button" value="Input (button)">
+					<br>
+					<br>
+					<label>Input (checkbox):</label>
+					<input id="Checkbox4" type="checkbox">
+					<label for="Checkbox4">Checkbox</label>
+					<input id="Checkbox5" type="checkbox">
+					<label for="Checkbox5">Checkbox</label>
+					<input id="Checkbox6" type="checkbox">
+					<label for="Checkbox6">Checkbox</label>
+					<br>
+					<br>
+					<label for="Color2">Input (color):</label>
+					<input id="Color2" type="color">
+					<br>
+					<br>
+					<label for="Date2">Input (date):</label>
+					<input id="Date2" type="date">
+					<br>
+					<br>
+					<label for="DateTimeLocal2">Input (datetime-local):</label>
+					<input id="DateTimeLocal2" type="datetime-local">
+					<br>
+					<br>
+					<label for="Email2">Input (email):</label>
+					<input id="Email2" type="email">
+					<br>
+					<br>
+					<label for="File2">Input (file):</label>
+					<input id="File2" type="file">
+					<br>
+					<br>
+					<label>Input (image):</label>
+					<input alt="This is an image, 100 x 200 pixels, with a black border." src="image-100x200-pixels-with-black-border.png" type="image">
+					<br>
+					<br>
+					<label for="Month2">Input (month):</label>
+					<input id="Month2" type="month">
+					<br>
+					<br>
+					<label for="Number2">Input (number):</label>
+					<input id="Number2" type="number">
+					<br>
+					<br>
+					<label for="Password2">Input (password):</label>
+					<input id="Password2" type="password">
+					<br>
+					<br>
+					<label>Input (radio):</label>
+					<input id="Radio4" type="radio">
+					<label for="Radio4">Radio</label>
+					<input id="Radio5" type="radio">
+					<label for="Radio5">Radio</label>
+					<input id="Radio6" type="radio">
+					<label for="Radio6">Radio</label>
+					<br>
+					<label>Input (range):</label>
+					<input type="range">
+					<br>
+					<br>
+					<label>Input (reset):</label>
+					<input type="reset">
+					<br>
+					<br>
+					<label for="Search2">Input (search):</label>
+					<input id="Search2" type="search">
+					<br>
+					<br>
+					<label>Input (submit):</label>
+					<input type="submit">
+					<br>
+					<br>
+					<label for="Tel2">Input (tel):</label>
+					<input id="Tel2" type="tel">
+					<br>
+					<br>
+					<label for="Text2">Input (text):</label>
+					<input id="Text2" type="text">
+					<br>
+					<br>
+					<label for="Time2">Input (time):</label>
+					<input id="Time2" type="time">
+					<br>
+					<br>
+					<label for="URL2">Input (url):</label>
+					<input id="URL2" type="url">
+					<br>
+					<br>
+					<label for="Week2">Input (week):</label>
+					<input id="Week2" type="week">
+					<br>
+					<br>
+					<label>Meter:</label>
+					<meter min="0" max="100" value="50"></meter>
+					<br>
+					<br>
+					<label>Output:</label>
+					<output>Output</output>
+					<br>
+					<br>
+					<label>Progress:</label>
+					<progress max="100" value="50"></progress>
+					<br>
+					<br>
+					<label>Select:</label>
+					<select>
+						<optgroup label="Optgroup">
+							<option>Option</option>
+						</optgroup>
+					</select>
+					<br>
+					<br>
+					<label for="Textarea2">Textarea:</label>
+					<textarea id="Textarea2"></textarea>
+				</fieldset>
+				<fieldset class="formGrid">
+					<legend>Separation: <code>display: table;</code></legend>
+					<div class="formGridRow">
+						<label>Button:</label>
+						<button>Button</button>
+					</div>
+					<div class="formGridRow">
+						<label>Input (button):</label>
+						<input type="button" value="Input (button)">
+					</div>
+					<div class="formGridRow">
+						<label>Input (checkbox):</label>
+						<div>
+							<input id="Checkbox7" type="checkbox">
+							<label for="Checkbox7">Checkbox</label>
+							<input id="Checkbox8" type="checkbox">
+							<label for="Checkbox8">Checkbox</label>
+							<input id="Checkbox9" type="checkbox">
+							<label for="Checkbox9">Checkbox</label>
+						</div>
+					</div>
+					<div class="formGridRow">
+						<label for="Color3">Input (color):</label>
+						<input id="Color3" type="color">
+					</div>
+					<div class="formGridRow">
+						<label for="Date3">Input (date):</label>
+						<input id="Date3" type="date">
+					</div>
+					<div class="formGridRow">
+						<label for="DateTimeLocal3">Input (datetime-local):</label>
+						<input id="DateTimeLocal3" type="datetime-local">
+					</div>
+					<div class="formGridRow">
+						<label for="Email3">Input (email):</label>
+						<input id="Email3" type="email">
+					</div>
+					<div class="formGridRow">
+						<label for="File3">Input (file):</label>
+						<input id="File3" type="file">
+					</div>
+					<div class="formGridRow">
+						<label>Input (image):</label>
+						<input alt="This is an image, 100 x 200 pixels, with a black border." src="image-100x200-pixels-with-black-border.png" type="image">
+					</div>
+					<div class="formGridRow">
+						<label for="Month3">Input (month):</label>
+						<input id="Month3" type="month">
+					</div>
+					<div class="formGridRow">
+						<label for="Number3">Input (number):</label>
+						<input id="Number3" type="number">
+					</div>
+					<div class="formGridRow">
+						<label for="Password3">Input (password):</label>
+						<input id="Password3" type="password">
+					</div>
+					<div class="formGridRow">
+						<label>Input (radio):</label>
+						<div>
+							<input id="Radio7" type="radio">
+							<label for="Radio7">Radio</label>
+							<input id="Radio8" type="radio">
+							<label for="Radio8">Radio</label>
+							<input id="Radio9" type="radio">
+							<label for="Radio9">Radio</label>
+						</div>
+					</div>
+					<div class="formGridRow">
+						<label>Input (range):</label>
+						<input type="range">
+					</div>
+					<div class="formGridRow">
+						<label>Input (reset):</label>
+						<input type="reset">
+					</div>
+					<div class="formGridRow">
+						<label for="Search3">Input (search):</label>
+						<input id="Search3" type="search">
+					</div>
+					<div class="formGridRow">
+						<label>Input (submit):</label>
+						<input type="submit">
+					</div>
+					<div class="formGridRow">
+						<label for="Tel3">Input (tel):</label>
+						<input id="Tel3" type="tel">
+					</div>
+					<div class="formGridRow">
+						<label for="Text3">Input (text):</label>
+						<input id="Text3" type="text">
+					</div>
+					<div class="formGridRow">
+						<label for="Time3">Input (time):</label>
+						<input id="Time3" type="time">
+					</div>
+					<div class="formGridRow">
+						<label for="URL3">Input (url):</label>
+						<input id="URL3" type="url">
+					</div>
+					<div class="formGridRow">
+						<label for="Week3">Input (week):</label>
+						<input id="Week3" type="week">
+					</div>
+					<div class="formGridRow">
+						<label>Meter:</label>
+						<meter min="0" max="100" value="50"></meter>
+					</div>
+					<div class="formGridRow">
+						<label>Output:</label>
+						<output>Output</output>
+					</div>
+					<div class="formGridRow">
+						<label>Progress:</label>
+						<progress max="100" value="50"></progress>
+					</div>
+					<div class="formGridRow">
+						<label>Select:</label>
+						<select>
+							<optgroup label="Optgroup">
+								<option>Option</option>
+							</optgroup>
+						</select>
+					</div>
+					<div class="formGridRow">
+						<label for="Textarea3">Textarea:</label>
+						<textarea id="Textarea3"></textarea>
+					</div>
+				</fieldset>
+			</form>
+		</main>
+	</body>
+</html>

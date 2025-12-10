@@ -1,0 +1,399 @@
+@charset "UTF-8";
+
+@namespace "http://www.w3.org/1999/xhtml";
+
+@layer Normalisation
+{
+	*, *::after, *::before
+	{
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+
+	:focus
+	{
+		/*
+		 * Outlining focused elements helps with keyboard navigation.
+		 */
+		outline: 0.1rem solid #0000FF;
+	}
+
+	/*************
+	 * Main root *
+	 *************/
+
+	html
+	{
+		overflow-y: scroll;
+	}
+
+	/*******************
+	 * Sectioning root *
+	 *******************/
+
+	body
+	{
+		font: normal normal normal normal 1rem/1.5rem sans-serif;
+		margin: 1rem;
+	}
+
+	/**********************
+	 * Content sectioning *
+	 **********************/
+
+	address
+	{
+		/*
+		 * Addresses are rarely displayed in italics.
+		 */
+		font-style: normal;
+		margin-block: 1rem;
+	}
+
+	h1
+	{
+		font-size: 2rem; /* (1rem * 2) - (0.2 * 0) */
+		line-height: 3rem; /* (1.5rem * 2) - (0.3 * 0) */
+		margin-block: 1rem;
+	}
+
+	h2
+	{
+		font-size: 1.8rem; /* ((1rem * 2) - (0.2 * 1)) */
+		line-height: 2.7rem; /* (1.5rem * 2) - (0.3 * 1) */
+		margin-block: 1rem;
+	}
+
+	h3
+	{
+		font-size: 1.6rem; /* ((1rem * 2) - (0.2 * 2)) */
+		line-height: 2.4rem; /* (1.5rem * 2) - (0.3 * 2) */
+		margin-block: 1rem;
+	}
+
+	h4
+	{
+		font-size: 1.4rem; /* ((1rem * 2) - (0.2 * 3)) */
+		line-height: 2.1rem; /* (1.5rem * 2) - (0.3 * 3) */
+		margin-block: 1rem;
+	}
+
+	h5
+	{
+		font-size: 1.2rem; /* ((1rem * 2) - (0.2 * 4)) */
+		line-height: 1.8rem; /* (1.5rem * 2) - (0.3 * 4) */
+		margin-block: 1rem;
+	}
+
+	h6
+	{
+		font-size: 1rem; /* ((1rem * 2) - (0.2 * 5)) */
+		line-height: 1.5rem; /* (1.5rem * 2) - (0.3 * 5) */
+		margin-block: 1rem;
+	}
+
+	/****************
+	 * Text content *
+	 ****************/
+
+	:is(dl, menu, ol, ul) :is(dl, menu, ol, ul)
+	{
+		margin-block: 0;
+	}
+
+	blockquote
+	{
+		border-inline-start: 0.15rem solid #000000;
+		padding-block: 1rem;
+		padding-inline: 3rem;
+	}
+
+	blockquote p
+	{
+		/*
+		 * A paragraph inside a blockquote should not add to the gap between the blockquote and other elements.
+		 */
+		margin: 0;
+	}
+
+	dd
+	{
+		margin-inline-start: 3rem;
+	}
+
+	dl
+	{
+		margin-block: 1rem;
+	}
+
+	dl p
+	{
+		/*
+		 * A paragraph inside a definition list should not add to the gap between the definition list and other elements.
+		 */
+		margin: 0;
+	}
+
+	dt
+	{
+		font-weight: bold;
+		margin-block-end: 0.5rem;
+
+		&:not(:first-child)
+		{
+			margin-block-start: 0.5rem;
+		}
+	}
+
+	hr
+	{
+		border: 0.1rem solid #000000;
+	}
+
+	menu
+	{
+		list-style-type: disc;
+		margin-block: 1rem;
+		padding-inline-start: 3rem;
+	}
+
+	ol
+	{
+		margin-block: 1rem;
+		padding-inline-start: 3rem;
+	}
+
+	p
+	{
+		hyphens: auto;
+		margin-block: 1rem;
+		text-align: justify;
+	}
+
+	pre
+	{
+		background-color: #F8F9FA;
+		border: 0.1rem solid #DADDE3;
+		margin-block: 1rem;
+		overflow-x: auto;
+		padding: 0.5rem;
+	}
+
+	pre code
+	{
+		border: 0;
+		padding: 0;
+	}
+
+	ul
+	{
+		list-style-type: disc;
+		margin-block: 1rem;
+		padding-inline-start: 3rem;
+	}
+
+	/*************************
+	 * Inline text semantics *
+	 *************************/
+
+	a
+	{
+		text-decoration: none;
+	}
+
+	abbr[title]
+	{
+		cursor: help;
+	}
+
+	cite
+	{
+		font-style: normal;
+	}
+
+	code
+	{
+		background-color: #F8F9FA;
+		border: 0.1rem solid #DADDE3;
+		padding-inline: 0.3rem;
+	}
+
+	kbd kbd
+	{
+		border-radius: 0.2rem;
+	}
+
+	kbd kbd, kbd samp
+	{
+		background-color: #F8F9FA;
+		border: 0.1rem solid #DADDE3;
+		font-size: 0.9rem;
+		font-weight: bold;
+		padding-inline: 0.3rem;
+		white-space: nowrap;
+	}
+
+	mark code
+	{
+		background-color: inherit;
+	}
+
+	q::after, q::before
+	{
+		/*
+		 * Quotation marks should be present in HTML documents.
+		 * Chromium defaults to English quotation marks.
+		 * Firefox relies on the lang attribute to choose quotation marks.
+		 */
+		content: none;
+	}
+
+	span[title]
+	{
+		cursor: help;
+		/*
+		 * Underline span elements with title attributes (tool tips).
+		 * Same style as attr[title] as both Chromium and Firefox add a dotted underline.
+		 */
+		text-decoration: dotted underline;
+	}
+
+	/************************
+	 * Image and multimedia *
+	 ************************/
+
+	audio,
+	img,
+	video
+	{
+		height: auto;
+		max-width: 100%;
+	}
+
+	img
+	{
+		/*
+		 * Fallback text (alt attribute) should be visually distinct from surrounding text.
+		 */
+		font-style: italic;
+	}
+
+	/********************
+	 * Embedded content *
+	 ********************/
+
+	embed,
+	iframe,
+	object
+	{
+		/*
+		 * Chromium and Firefox give iframe a border but not embed and object.
+		 * All three elements have overlapping functionality but also unique aspects.
+		 * Normalise border properties and make no assumption about usage and appearance.
+		 */
+		border: 0;
+		height: auto;
+		max-width: 100%;
+	}
+
+	/*****************
+	 * Table content *
+	 *****************/
+
+	caption
+	{
+		font-weight: bold;
+	}
+
+	table
+	{
+		background-color: #F8F9FA;
+		border: 0.1rem solid #A2A9B1;
+		border-collapse: collapse;
+	}
+
+	td
+	{
+		border: 0.1rem solid #A2A9B1;
+		padding: 0.3rem;
+	}
+
+	th
+	{
+		background-color: #EAECF0;
+		border: 0.1rem solid #A2A9B1;
+		font-weight: bold;
+		padding: 0.3rem;
+	}
+
+	/*********
+	 * Forms *
+	 *********/
+
+	button,
+	fieldset,
+	input,
+	label,
+	legend,
+	optgroup,
+	option,
+	select,
+	textarea
+	{
+		font: inherit;
+	}
+
+	button,
+	input,
+	select,
+	textarea
+	{
+		padding-block: 0.1rem;
+		padding-inline: 0.3rem;
+	}
+
+	button:hover,
+	input:hover,
+	select:hover,
+	textarea:hover
+	{
+		outline: 0.1rem solid #000000;
+	}
+
+	fieldset
+	{
+		padding-block-end: 1rem;
+		padding-inline: 1rem;
+	}
+
+	legend
+	{
+		padding-inline: 0.5rem;
+	}
+
+	textarea
+	{
+		/*
+		 * The specified height should apply to the content (text) irrespective of border width and padding size.
+		 */
+		box-sizing: content-box;
+		height: 3lh;
+	}
+
+	/************************
+	 * Interactive elements *
+	 ************************/
+
+	details
+	{
+		margin-block: 1rem;
+	}
+
+	dialog
+	{
+		border: 0.1rem solid #000000;
+		margin: auto;
+		padding: 1rem;
+	}
+}
