@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-@namespace "http://www.w3.org/1999/xhtml";
-
 @layer Normalisation
 {
 	*, *::after, *::before
@@ -11,12 +9,13 @@
 		padding: 0;
 	}
 
-	:focus
+	:focus-visible
 	{
 		/*
 		 * Outlining focused elements helps with keyboard navigation.
 		 */
-		outline: 0.1rem solid #0000FF;
+		outline: 0.2rem solid Highlight;
+		outline-offset: 0.15rem;
 	}
 
 	/*************
@@ -53,43 +52,43 @@
 
 	h1
 	{
-		font-size: 2rem; /* (1rem * 2) - (0.2 * 0) */
-		line-height: 3rem; /* (1.5rem * 2) - (0.3 * 0) */
+		font-size: 2rem;
+		line-height: 2.2rem;
 		margin-block: 1rem;
 	}
 
 	h2
 	{
-		font-size: 1.8rem; /* (1rem * 2) - (0.2 * 1) */
-		line-height: 2.7rem; /* (1.5rem * 2) - (0.3 * 1) */
+		font-size: 1.8rem;
+		line-height: 2rem;
 		margin-block: 1rem;
 	}
 
 	h3
 	{
-		font-size: 1.6rem; /* (1rem * 2) - (0.2 * 2) */
-		line-height: 2.4rem; /* (1.5rem * 2) - (0.3 * 2) */
+		font-size: 1.6rem;
+		line-height: 1.8rem;
 		margin-block: 1rem;
 	}
 
 	h4
 	{
-		font-size: 1.4rem; /* (1rem * 2) - (0.2 * 3) */
-		line-height: 2.1rem; /* (1.5rem * 2) - (0.3 * 3) */
+		font-size: 1.4rem;
+		line-height: 1.6rem;
 		margin-block: 1rem;
 	}
 
 	h5
 	{
-		font-size: 1.2rem; /* (1rem * 2) - (0.2 * 4) */
-		line-height: 1.8rem; /* (1.5rem * 2) - (0.3 * 4) */
+		font-size: 1.2rem;
+		line-height: 1.4rem;
 		margin-block: 1rem;
 	}
 
 	h6
 	{
-		font-size: 1rem; /* (1rem * 2) - (0.2 * 5) */
-		line-height: 1.5rem; /* (1.5rem * 2) - (0.3 * 5) */
+		font-size: 1rem;
+		line-height: 1.2rem;
 		margin-block: 1rem;
 	}
 
