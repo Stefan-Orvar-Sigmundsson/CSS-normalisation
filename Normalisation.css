@@ -14,8 +14,8 @@
 		/*
 		 * Outlining focused elements helps with keyboard navigation.
 		 */
-		outline: 0.2rem solid Highlight;
-		outline-offset: 0.15rem;
+		outline: 0.15rem solid Highlight;
+		outline-offset: 0;
 	}
 
 	/*************
@@ -241,9 +241,7 @@
 	q::after, q::before
 	{
 		/*
-		 * Quotation marks should be present in HTML documents.
-		 * Chromium defaults to English quotation marks.
-		 * Firefox relies on the lang attribute to choose quotation marks.
+		 * Quotation marks should be present in HTML documents for copy-and-paste fidelity, consistency with other punctuation, predictability across user agents and authorial control.
 		 */
 		content: none;
 	}
@@ -357,7 +355,8 @@
 	select:hover,
 	textarea:hover
 	{
-		outline: 0.1rem solid #000000;
+		outline: 0.15rem solid Highlight;
+		outline-offset: 0.15rem;
 	}
 
 	fieldset
