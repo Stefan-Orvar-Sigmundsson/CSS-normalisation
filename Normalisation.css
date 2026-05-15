@@ -264,6 +264,7 @@
 		 * Same style as attr[title] as both Chromium and Firefox add a dotted underline.
 		 */
 		text-decoration: dotted underline;
+		text-underline-offset: 0.3rem;
 	}
 
 	/************************
