@@ -1,4 +1,4 @@
-[Table of contents](../)
+[Table of contents](https://github.com/Stefan-Orvar-Sigmundsson/CSS-normalisation/)
 
 # Heading font sizing
 
